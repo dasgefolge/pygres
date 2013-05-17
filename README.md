@@ -5,12 +5,14 @@ The site at [gres.fenhl.net][] is always running the latest version on the maste
 Requirements
 ============
 
-`pygres` is currently in early development, but will run on the following:
+To run `pygres`, you will need:
 
 *   The Apache httpd
-*   OpenID
 *   [mod_auth_openid][modauthopenid]
 *   [Python][] 3
+
+`pygres` is currently in early development. Future versions may require the following:
+
 *   [gresd][]
 
 [Progress]: http://fenhl.net/gres/ (fenhl.net: Progress)
