@@ -9,6 +9,7 @@ Requirements
 
 *   The Apache httpd
 *   OpenID
+*   [mod_auth_openid][modauthopenid]
 *   [Python][] 3
 *   [gresd][]
 
@@ -16,3 +17,4 @@ Requirements
 [Python]: http://ww.python.org/ (Python)
 [gresd]: https://github.com/fidera/gresd (github: fidera: gresd)
 [gres.fenhl.net]: http://gres.fenhl.net/ (Progress test implementation)
+[modauthopenid]: https://github.com/bmuller/mod_auth_openid (github: bmuller: mod_auth_openid)
