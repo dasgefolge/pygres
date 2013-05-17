@@ -74,13 +74,9 @@ if __name__ == "__main__":
                     cgi.escape("Error 403: Forbidden (Wait, what?)")
                 ) + tag("p", content=
                     cgi.escape("You're not supposed to be here. Try the ") +
-                    tag("a", attributes={"href": "http://gres.fenhl.net/"}, content=
+                    tag("a", attributes={"href": "/"}, content=
                         cgi.escape("main page")
                     ) +
-                    cgi.escape(" or ") +
-                    tag("a", attributes={"href": "http://fenhl.net/"}, content=
-                        cgi.escape("go back to fenhl.net")
-                    ) + 
                     cgi.escape(".")
                 )
             )
