@@ -19,7 +19,7 @@ def header(logout=False):
     if logout:
         ret += "Set-Cookie: open_id_session_id=logout; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/id/\n"
         newquery = os.environ.get("QUERY_STRING", "").replace("logout=1&", "").replace("logout=1", "")
-        ret += "Refresh: 1;url=http://gres.fenhl.net" + (lambda x: "/" if x == "/index.py" else x)(os.environ.get("SCRIPT_NAME", "/")) + ("" if newquery == "" else "?") + newquery + "\n"
+        ret += "Refresh: 1;url=" + (lambda x: "/" if x == "/index.py" else x)(os.environ.get("SCRIPT_NAME", "/")) + ("" if newquery == "" else "?") + newquery + "\n"
     return ret
 
 def doctype():
