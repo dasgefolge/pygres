@@ -52,7 +52,7 @@ def grestoolbar():
             tag("a", attributes={"href": "/id" + os.environ.get("REQUEST_URI", "/")}, content="log in")
         )
     else:
-        return tag("div", attributes={"class": "center", "style": "border: 1px solod white; border-bottom: 1px solid #60f; padding: 2px; margin: 2px;"}, content=(
+        return tag("div", attributes={"class": "center", "style": "border: 1px solid white; border-bottom: 1px solid #60f; padding: 2px; margin: 2px;"}, content=(
             "You are logged in as " +
             tag("a", attributes={"href": oid()}, content=oid()) +
             " &mdash; " +
