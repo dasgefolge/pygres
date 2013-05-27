@@ -48,11 +48,11 @@ def greshead():
 
 def grestoolbar():
     if oid() == None:
-        return tag("div", attributes={"class": "purple center", "style": "padding: 5px;"}, content=
+        return tag("div", attributes={"class": "purple center", "style": "padding: 10px; margin: 0;"}, content=
             tag("a", attributes={"href": "/id" + os.environ.get("REQUEST_URI", "/")}, content="log in")
         )
     else:
-        return tag("div", attributes={"class": "center", "style": "border: 1px solid white; border-bottom: 1px solid #60f; padding: 2px; margin: 2px;"}, content=(
+        return tag("div", attributes={"class": "center", "style": "border-bottom: 1px solid #60f; padding: 10px; margin: 0;"}, content=(
             "You are logged in as " +
             tag("a", attributes={"href": oid()}, content=oid()) +
             " &mdash; " +
