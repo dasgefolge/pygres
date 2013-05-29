@@ -3,7 +3,7 @@ import ht
 import sys
 
 def htmain():
-    print(ht.grespage(content=
+    print(ht.grespage(attributes={"class": "center"}, content=
         ht.tag("div", attributes={"style": "position: relative;"}, content=
             ht.tag("a", attributes={"href": "https://github.com/fidera/pygres"}, content=
                 ht.tag("img", attributes={"style": "position: absolute; top: 0; right: 0; border: 0;", "src": "https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png", "alt": "Fork me on GitHub"})
