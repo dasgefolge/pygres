@@ -65,10 +65,8 @@ def grespage(attributes={}, content=""):
     ret += doctype() + "\n"
     ret += greshead()
     if query().get("logout", ""):
-        cont = tag("body", attributes={"class": "purple"}, content=ht.tag("h1", content="You have been logged out.") + ht.tag("p", content="You should be redirected in a sec. If not, click " + ht.tag("a", attributes={"href": (lambda x: "/" if x == "/index.py" else x)(os.environ.get("SCRIPT_NAME", "/")) + ("" if newquery == "" else "?") + newquery}, content="here") + "."))
-    elif (not os.environ.get("REQUEST_URI", "/").startswith("/id/")):
-        print(header())
-        cgi.print_environ()
+        newquery = os.environ.get("QUERY_STRING", "").replace("logout=1&", "").replace("logout=1", "")
+        cont = tag("body", attributes={"class": "purple"}, content=tag("h1", content="You have been logged out.") + tag("p", content="You should be redirected in a sec. If not, click " + tag("a", attributes={"href": (lambda x: "/" if x == "/index.py" else x)(os.environ.get("SCRIPT_NAME", "/")) + ("" if newquery == "" else "?") + newquery}, content="here") + "."))
     else:
         cont = tag("body", attributes=attributes, content=grestoolbar() + content)
     ret += cont
