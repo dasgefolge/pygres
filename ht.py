@@ -60,6 +60,19 @@ def grestoolbar():
         )
     )
 
+def grespage(attributes={}, content=""):
+    ret = header(logout=bool(query().get("logout", False))) + "\n"
+    ret += doctype() + "\n"
+    ret += greshead()
+    if query.get("logout", ""):
+        cont = tag("body", attributes={"class": "purple"}, content=ht.tag("h1", content="You have been logged out.") + ht.tag("p", content="You should be redirected in a sec. If not, click " + ht.tag("a", attributes={"href": (lambda x: "/" if x == "/index.py" else x)(os.environ.get("SCRIPT_NAME", "/")) + ("" if newquery == "" else "?") + newquery}, content="here") + ".")
+    elif (not os.environ.get("REQUEST_URI", "/").startswith("/id/")):
+        cont = tag("body", content=cgi.print_environ())
+    else:
+        cont = tag("body", attributes=attributes, content=grestoolbar() + content)
+    ret += cont
+    return ret
+
 if __name__ == "__main__":
     printintro()
     print(
