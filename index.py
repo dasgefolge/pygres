@@ -3,7 +3,6 @@ import ht
 import sys
 
 def htmain():
-    ht.printintro()
     print(ht.grespage(content=
         ht.tag("div", attributes={"style": "position: relative;"}, content=
             ht.tag("a", attributes={"href": "https://github.com/fidera/pygres"}, content=
