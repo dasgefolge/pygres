@@ -43,7 +43,8 @@ def greshead():
     return tag("head", content=
         tag("title", content="Progress") +
         tag("meta", attributes={"charset": "utf-8"}) +
-        tag("link", attributes={"rel": "stylesheet", "type": "text/css", "href": "http://fenhl.net/fenhl.css"})
+        tag("link", attributes={"rel": "shortcut icon", "href": "http://fenhl.net/ava/progress/gres-16.png"}) +
+        tag("link", attributes={"rel": "stylesheet", "type": "text/css", "href": "http://fenhl.net/lib/fenhl.css"})
     )
 
 def grestoolbar():
@@ -79,7 +80,10 @@ if __name__ == "__main__":
             tag("head", content=
                 tag("title", content=
                     cgi.escape("Progress: Error 403")
-                )
+                ) +
+                tag("meta", attributes={"charset": "utf-8"}) +
+                tag("link", attributes={"rel": "shortcut icon", "href": "http://fenhl.net/ava/progress/gres-16.png"}) +
+                tag("link", attributes={"rel": "stylesheet", "type": "text/css", "href": "http://fenhl.net/lib/fenhl.css"})
             ) +
             tag("body", content=
                 tag("h1", content=
